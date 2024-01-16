@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "static-list",
-  "title": "Control RectanglePro from Raycast",
-  "description": "Control RectanglePro from Raycast",
+  "title": "RectangleCast",
+  "description": "Control RectanglePro From Raycast",
   "icon": "command-icon.png",
   "author": "nonameolsson",
   "license": "MIT",
