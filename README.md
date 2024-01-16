@@ -1,6 +1,6 @@
 # Raycast RectanglePro
 
-Control RectanglePro from Raycast
+Control [RectanglePro](https://rectangleapp.com/pro) from Raycast
 
 Reason: https://github.com/rxhanson/RectanglePro-Community/issues/408#issuecomment-1893080416
 
