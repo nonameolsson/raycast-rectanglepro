@@ -1,26 +1,6 @@
 import { Action, ActionPanel, List, closeMainWindow, popToRoot } from "@raycast/api";
 import { useExec } from "@raycast/utils";
-
-const commands: RectangleProCommand[] = [
-  {
-    id: 1,
-    title: "Left Half",
-    subtitle: "Move window to left half of screen",
-    command: "left-half",
-  },
-  {
-    id: 2,
-    title: "Right Half",
-    subtitle: "Move window to right half of screen",
-    command: "right-half",
-  },
-  {
-    id: 3,
-    title: "Last Two Thirds",
-    command: "last-two-thirds",
-    subtitle: "Move window to last two thirds of screen",
-  },
-];
+import { RectangleProCommand, commands } from "./commands";
 
 export default function RectanglePro() {
   return (
@@ -35,13 +15,14 @@ export default function RectanglePro() {
 }
 
 function Command({ command }: { readonly command: RectangleProCommand }) {
-  const { revalidate } = useExec(`open -g "rectangle-pro://execute-action?name=${command.command}"`, {
+  const executeActionUrl = `open -g "rectangle-pro://execute-action?name=${command.command}"`;
+
+  const { revalidate } = useExec(executeActionUrl, {
     execute: false,
     shell: true,
   });
 
   function runCommand() {
-    console.log("runCommand");
     revalidate();
     closeMainWindow();
     popToRoot();
@@ -60,11 +41,4 @@ function Command({ command }: { readonly command: RectangleProCommand }) {
       }
     />
   );
-}
-
-interface RectangleProCommand {
-  id: number;
-  title: string;
-  subtitle: string;
-  command: string;
 }

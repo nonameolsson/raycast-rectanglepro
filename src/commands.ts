@@ -1,0 +1,261 @@
+export interface RectangleProCommand {
+  id: number;
+  title: string;
+  subtitle: string;
+  command: string;
+}
+
+export const commands: RectangleProCommand[] = [
+  {
+    id: 1,
+    title: "Left Half",
+    subtitle: "Move window to left half of screen",
+    command: "left-half",
+  },
+  {
+    id: 2,
+    title: "Right Half",
+    subtitle: "Move window to right half of screen",
+    command: "right-half",
+  },
+  {
+    id: 3,
+    title: "Maximize",
+    subtitle: "Maximize window",
+    command: "maximize",
+  },
+  {
+    id: 4,
+    title: "Maximize Height",
+    subtitle: "Maximize window height",
+    command: "maximize-height",
+  },
+  {
+    id: 5,
+    title: "Previous Display",
+    subtitle: "Move window to previous display",
+    command: "previous-display",
+  },
+  {
+    id: 6,
+    title: "Next Display",
+    subtitle: "Move window to next display",
+    command: "next-display",
+  },
+  {
+    id: 7,
+    title: "Larger",
+    subtitle: "Increase window size",
+    command: "larger",
+  },
+  {
+    id: 8,
+    title: "Smaller",
+    subtitle: "Decrease window size",
+    command: "smaller",
+  },
+  {
+    id: 9,
+    title: "Bottom Half",
+    subtitle: "Move window to bottom half of screen",
+    command: "bottom-half",
+  },
+  {
+    id: 10,
+    title: "Top Half",
+    subtitle: "Move window to top half of screen",
+    command: "top-half",
+  },
+  {
+    id: 11,
+    title: "Center",
+    subtitle: "Move window to center of screen",
+    command: "center",
+  },
+  {
+    id: 12,
+    title: "Bottom Left",
+    subtitle: "Move window to bottom left of screen",
+    command: "bottom-left",
+  },
+  {
+    id: 13,
+    title: "Bottom Right",
+    subtitle: "Move window to bottom right of screen",
+    command: "bottom-right",
+  },
+  {
+    id: 14,
+    title: "Top Left",
+    subtitle: "Move window to top left of screen",
+    command: "top-left",
+  },
+  {
+    id: 15,
+    title: "Top Right",
+    subtitle: "Move window to top right of screen",
+    command: "top-right",
+  },
+  {
+    id: 16,
+    title: "Restore",
+    subtitle: "Restore window to previous size",
+    command: "restore",
+  },
+  {
+    id: 17,
+    title: "First Third",
+    subtitle: "Move window to first third of screen",
+    command: "first-third",
+  },
+  {
+    id: 18,
+    title: "First Two Thirds",
+    subtitle: "Move window to first two thirds of screen",
+    command: "first-two-thirds",
+  },
+  {
+    id: 19,
+    title: "Center Third",
+    subtitle: "Move window to center third of screen",
+    command: "center-third",
+  },
+  {
+    id: 20,
+    title: "Last Two Thirds",
+    subtitle: "Move window to last two thirds of screen",
+    command: "last-two-thirds",
+  },
+  {
+    id: 21,
+    title: "Last Third",
+    subtitle: "Move window to last third of screen",
+    command: "last-third",
+  },
+  {
+    id: 22,
+    title: "Move Left",
+    subtitle: "Move window to the left",
+    command: "move-left",
+  },
+  {
+    id: 23,
+    title: "Move Right",
+    subtitle: "Move window to the right",
+    command: "move-right",
+  },
+  {
+    id: 24,
+    title: "Move Up",
+    subtitle: "Move window up",
+    command: "move-up",
+  },
+  {
+    id: 25,
+    title: "Move Down",
+    subtitle: "Move window down",
+    command: "move-down",
+  },
+  {
+    id: 26,
+    title: "Almost Maximize",
+    subtitle: "Almost maximize window",
+    command: "almost-maximize",
+  },
+  {
+    id: 27,
+    title: "Fill Left",
+    subtitle: "Fill left half of screen with window",
+    command: "fill-left",
+  },
+  {
+    id: 28,
+    title: "Fill Right",
+    subtitle: "Fill right half of screen with window",
+    command: "fill-right",
+  },
+  {
+    id: 29,
+    title: "Center Half",
+    subtitle: "Move window to center half of screen",
+    command: "center-half",
+  },
+  {
+    id: 30,
+    title: "First Fourth",
+    subtitle: "Move window to first fourth of screen",
+    command: "first-fourth",
+  },
+  {
+    id: 31,
+    title: "Second Fourth",
+    subtitle: "Move window to second fourth of screen",
+    command: "second-fourth",
+  },
+  {
+    id: 32,
+    title: "Third Fourth",
+    subtitle: "Move window to third fourth of screen",
+    command: "third-fourth",
+  },
+  {
+    id: 33,
+    title: "Last Fourth",
+    subtitle: "Move window to last fourth of screen",
+    command: "last-fourth",
+  },
+  {
+    id: 34,
+    title: "Top Left Sixth",
+    subtitle: "Move window to top left sixth of screen",
+    command: "top-left-sixth",
+  },
+  {
+    id: 35,
+    title: "Top Center Sixth",
+    subtitle: "Move window to top center sixth of screen",
+    command: "top-center-sixth",
+  },
+  {
+    id: 36,
+    title: "Top Right Sixth",
+    subtitle: "Move window to top right sixth of screen",
+    command: "top-right-sixth",
+  },
+  {
+    id: 37,
+    title: "Bottom Left Sixth",
+    subtitle: "Move window to bottom left sixth of screen",
+    command: "bottom-left-sixth",
+  },
+  {
+    id: 38,
+    title: "Bottom Center Sixth",
+    subtitle: "Move window to bottom center sixth of screen",
+    command: "bottom-center-sixth",
+  },
+  {
+    id: 39,
+    title: "Bottom Right Sixth",
+    subtitle: "Move window to bottom right sixth of screen",
+    command: "bottom-right-sixth",
+  },
+  {
+    id: 40,
+    title: "First Sixth",
+    subtitle: "Move window to first sixth of screen",
+    command: "first-sixth",
+  },
+  {
+    id: 41,
+    title: "Last Sixth",
+    subtitle: "Move window to last sixth of screen",
+    command: "last-sixth",
+  },
+  {
+    id: 42,
+    title: "Fullscreen",
+    subtitle: "Make window fullscreen",
+    command: "fullscreen",
+  },
+];
