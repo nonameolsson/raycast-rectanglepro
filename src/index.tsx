@@ -1,12 +1,87 @@
 import { Action, ActionPanel, List, closeMainWindow, popToRoot } from "@raycast/api";
 import { useExec } from "@raycast/utils";
-import { RectangleProCommand, commands } from "./commands";
+import {
+  RectangleProCommand,
+  centerCommands,
+  cornerCommands,
+  fillCommands,
+  fourthsCommands,
+  halfCommands,
+  maximizedCommands,
+  moveCommands,
+  sixthsCommands,
+  sizeCommands,
+  thirdsCommands,
+} from "./commands";
 
 export default function RectanglePro() {
   return (
     <List filtering={true} searchBarPlaceholder="RectanglePro commands">
-      <List.Section title="Be a Pro, a RectanglePro">
-        {commands.map((command) => (
+      <List.Item
+        title="Fill"
+        actions={
+          <ActionPanel>
+            <Action.Push title="Push Pong" target={<Pong />} />
+          </ActionPanel>
+        }
+      />
+
+      <List.Section title="Halfs">
+        {halfCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Corners">
+        {cornerCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Thirds">
+        {thirdsCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Maximize">
+        {maximizedCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Size">
+        {sizeCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Center">
+        {centerCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Move">
+        {moveCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Fill">
+        {fillCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Fourth">
+        {fourthsCommands.map((command) => (
+          <Command key={command.id} command={command} />
+        ))}
+      </List.Section>
+
+      <List.Section title="Sixths">
+        {sixthsCommands.map((command) => (
           <Command key={command.id} command={command} />
         ))}
       </List.Section>
@@ -40,5 +115,28 @@ function Command({ command }: { readonly command: RectangleProCommand }) {
         </ActionPanel>
       }
     />
+  );
+}
+
+function Pong() {
+  return (
+    <List filtering={true} searchBarPlaceholder="Fill">
+      <List.Item
+        title="Fill left"
+        actions={
+          <ActionPanel>
+            <Action title="Fill Left" />
+          </ActionPanel>
+        }
+      />
+      <List.Item
+        title="Fill right"
+        actions={
+          <ActionPanel>
+            <Action title="Fill Right" />
+          </ActionPanel>
+        }
+      />
+    </List>
   );
 }
