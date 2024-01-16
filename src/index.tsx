@@ -1,4 +1,4 @@
-import { Action, ActionPanel, List, closeMainWindow, popToRoot } from "@raycast/api";
+import { Action, ActionPanel, List, closeMainWindow, popToRoot, showHUD } from "@raycast/api";
 import { useExec } from "@raycast/utils";
 import {
   RectangleProCommand,
@@ -97,7 +97,8 @@ function Command({ command }: { readonly command: RectangleProCommand }) {
     shell: true,
   });
 
-  function runCommand() {
+  async function runCommand(hudTitle: string) {
+    await showHUD(hudTitle);
     revalidate();
     closeMainWindow();
     popToRoot();
@@ -110,7 +111,7 @@ function Command({ command }: { readonly command: RectangleProCommand }) {
       actions={
         <ActionPanel>
           <ActionPanel.Section>
-            <Action title="Run Command" onAction={runCommand} />
+            <Action title="Run Command" onAction={() => runCommand(command.title)} />
           </ActionPanel.Section>
         </ActionPanel>
       }
