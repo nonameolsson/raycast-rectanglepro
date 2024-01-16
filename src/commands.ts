@@ -153,12 +153,6 @@ export const centerCommands: RectangleProCommand[] = [
     subtitle: "Move window to center of screen",
     command: "center",
   },
-  {
-    id: 2,
-    title: "Upper Center",
-    subtitle: "Move window to upper center of screen",
-    command: "top-center-sixth",
-  },
 ];
 
 export const fourthsCommands: RectangleProCommand[] = [
